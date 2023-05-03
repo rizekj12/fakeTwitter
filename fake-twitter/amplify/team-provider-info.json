@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-faketwitterbackend-dev-204237-authRole",
+      "UnauthRoleArn": "arn:aws:iam::105744709329:role/amplify-faketwitterbackend-dev-204237-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::105744709329:role/amplify-faketwitterbackend-dev-204237-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-faketwitterbackend-dev-204237-deployment",
+      "UnauthRoleName": "amplify-faketwitterbackend-dev-204237-unauthRole",
+      "StackName": "amplify-faketwitterbackend-dev-204237",
+      "StackId": "arn:aws:cloudformation:us-east-1:105744709329:stack/amplify-faketwitterbackend-dev-204237/67b04e20-e94b-11ed-a790-12144321573f",
+      "AmplifyAppId": "d1wpwxrlcufp5k"
+    },
+    "categories": {
+      "auth": {
+        "faketwitterbackend3d02a5e2": {}
+      },
+      "api": {
+        "faketwitterbackend": {}
+      }
+    }
+  }
+}
