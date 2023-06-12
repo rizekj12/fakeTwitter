@@ -7,9 +7,20 @@ import LoginPage from './pages/LoginPage';
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
-function App() {
+function App({ signOut, user }) {
+  /* src/App.js */
+// function App({ signOut, user }) { 
+//   // ... 
+// }
   return (
-    <div>
+
+
+    <>
+       
+    <Heading level={1}>Hello {user.username}</Heading>
+    <Button onClick={signOut}>Sign out</Button>
+    <h2>Amplify Todos</h2>
+    
 <Routes>
 <Route path={'/'} element={<Main/>}/>
   <Route path={'/account-home'} element={<HomePage/>}/>
@@ -17,8 +28,8 @@ function App() {
   <Route path={'/signup-page'} element={<SignUp/>}/>
 </Routes>
 
-    </div>
+    </>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
