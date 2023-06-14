@@ -7,6 +7,9 @@ import LoginPage from "./pages/LoginPage";
 import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
+import Post from "./components/Post";
+import postData from "./data/postData";
+
 function App({ signOut, user }) {
   /* src/App.js */
   // function App({ signOut, user }) {
@@ -19,6 +22,8 @@ function App({ signOut, user }) {
       <Heading level={1}>Hello {user.username}</Heading>
       <Button onClick={signOut}>Sign out</Button>
       <h2>Amplify Todos</h2>
+
+      <Post post={postData} />
 
       <Routes>
         <Route path={"/"} element={<Main />} />

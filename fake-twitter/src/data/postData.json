@@ -1,0 +1,102 @@
+[
+  {
+    "created_at": "Wed Oct 10 20:19:24 +0000 2018",
+    "id": 1,
+    "text": "To make room for more expression, we will now count all emojis as equal—including those with gender‍‍‍ ‍‍and skin t… https://t.co/MkGjXf9aXm",
+    "user": {
+      "id": 1,
+      "name": "Twitter API",
+      "screen_name": "TwitterAPI",
+      "location": "San Francisco, CA",
+      "description": "The Real Twitter API. Tweets about API changes, service issues and our Developer Platform. Don't get an answer? It's on my website.",
+      "url": "https://t.co/8IkCzCDr19",
+      "followers_count": 5,
+      "created_at": "Wed May 23 06:01:13 +0000 2007",
+      "verified": true,
+      "lang": null,
+      "profile_image_url": null,
+      "profile_banner_url": null,
+      "default_profile_image": false
+    }
+  },
+  {
+    "created_at": "Thu Jun 14 10:30:45 +0000 2023",
+    "id": 2,
+    "text": "Excited to announce the launch of our new product! 🚀🎉 Check it out on our website: https://t.co/abcdef1234 #newproductlaunch #excitingnews",
+    "user": {
+      "id": 2,
+      "name": "Jane Smith",
+      "screen_name": "janesmith",
+      "location": "New York, NY",
+      "description": "Passionate about technology and innovation. Love exploring new ideas and making them a reality. Views are my own.",
+      "url": "https://t.co/xyz123",
+      "followers_count": 2000,
+      "created_at": "Fri Jan 05 16:45:22 +0000 2015",
+      "verified": false,
+      "lang": "en",
+      "profile_image_url": null,
+      "profile_banner_url": null,
+      "default_profile_image": true
+    }
+  },
+  {
+    "created_at": "Thu Jun 14 11:45:18 +0000 2023",
+    "id": 3,
+    "text": "Had an amazing time at the conference today! Learned so much from the insightful speakers. Looking forward to implementing new ideas. #conference #inspiration",
+    "user": {
+      "id": 3,
+      "name": "John Doe",
+      "screen_name": "johndoe",
+      "location": "London, UK",
+      "description": "Passionate about business and entrepreneurship. Always seeking new opportunities and challenges. Let's connect!",
+      "url": null,
+      "followers_count": 1500,
+      "created_at": "Sat Jul 12 09:12:31 +0000 2014",
+      "verified": false,
+      "lang": "en",
+      "profile_image_url": null,
+      "profile_banner_url": null,
+      "default_profile_image": false
+    }
+  },
+  {
+    "created_at": "Thu Jun 14 13:20:05 +0000 2023",
+    "id": 4,
+    "text": "Just finished reading a fantastic book that I highly recommend! It provided great insights and inspired me to take action. #bookrecommendation #inspiration",
+    "user": {
+      "id": 4,
+      "name": "Emily Brown",
+      "screen_name": "emilybrown",
+      "location": "Los Angeles, CA",
+      "description": "Book lover | Coffee enthusiast | Travel addict",
+      "url": "https://t.co/pqrstu5678",
+      "followers_count": 3000,
+      "created_at": "Tue Mar 18 12:30:10 +0000 2018",
+      "verified": false,
+      "lang": "en",
+      "profile_image_url": null,
+      "profile_banner_url": null,
+      "default_profile_image": false
+    }
+  },
+  {
+    "created_at": "Thu Jun 14 15:55:32 +0000 2023",
+    "id": 5,
+    "text": "Excited to launch our new website design! 🎉 Check it out and let us know what you think. #websiteredesign #launch",
+    "user": {
+      "id": 5,
+      "name": "David Wilson",
+      "screen_name": "davidwilson",
+      "location": "Toronto, Canada",
+      "description": "Passionate about web development and design. Helping businesses create impactful online experiences. Let's build something amazing together!",
+      "url": "https://t.co/qwerty123",
+      "followers_count": 5000,
+      "created_at": "Mon Nov 27 18:50:56 +0000 2017",
+      "verified": true,
+      "lang": "en",
+      "profile_image_url": null,
+      "profile_banner_url": null,
+      "default_profile_image": false
+    }
+  }
+]
