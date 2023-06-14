@@ -19,5 +19,26 @@
         "faketwitterbackend": {}
       }
     }
+  },
+  "twitter": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-faketwitterbackend-twitter-151945-authRole",
+      "UnauthRoleArn": "arn:aws:iam::105744709329:role/amplify-faketwitterbackend-twitter-151945-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::105744709329:role/amplify-faketwitterbackend-twitter-151945-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-faketwitterbackend-twitter-151945-deployment",
+      "UnauthRoleName": "amplify-faketwitterbackend-twitter-151945-unauthRole",
+      "StackName": "amplify-faketwitterbackend-twitter-151945",
+      "StackId": "arn:aws:cloudformation:us-east-1:105744709329:stack/amplify-faketwitterbackend-twitter-151945/17fce070-0956-11ee-ba55-0ec66602db55",
+      "AmplifyAppId": "d1wpwxrlcufp5k"
+    },
+    "categories": {
+      "auth": {
+        "faketwitterbackend3d02a5e2": {}
+      },
+      "api": {
+        "faketwitterbackend": {}
+      }
+    }
   }
 }
