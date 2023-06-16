@@ -7,12 +7,17 @@ import LoginPage from "./pages/LoginPage";
 import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
-import Feed from "./components/Feed";
-import Post from "./components/Post";
-import { useState } from "react";
+import Tweet from "./components/Tweet.jsx";
+import tweetData from "./data/tweetData.json";
+import { useState, useEffect } from "react";
 
 function App({ signOut, user }) {
-  const [postQuery, setPostQuery] = useState({});
+  const [tweetQuery, setTweetQuery] = useState([]);
+
+  useEffect(() => {
+    setTweetQuery(tweetData);
+    console.log(tweetQuery);
+  }, []);
 
   /* src/App.js */
   // function App({ signOut, user }) {
@@ -23,8 +28,9 @@ function App({ signOut, user }) {
       <Heading level={1}>Hello {user.username}</Heading>
       <Button onClick={signOut}>Sign out</Button>
 
-      <Feed postQuery={postQuery} />
-      <Post setPostQuery={setPostQuery} />
+      {tweetQuery.map((tweet) => (
+        <Tweet key={tweet.id} tweetQuery={tweetQuery} />
+      ))}
 
       <h2>Amplify Todos</h2>
       <Routes>
