@@ -7,24 +7,26 @@ import LoginPage from "./pages/LoginPage";
 import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
+import Feed from "./components/Feed";
 import Post from "./components/Post";
-import postData from "./data/postData";
+import { useState } from "react";
 
 function App({ signOut, user }) {
+  const [postQuery, setPostQuery] = useState({});
+
   /* src/App.js */
   // function App({ signOut, user }) {
   //   // ...
   // }
   return (
     <>
-      {/* this page will be the feed that people see when they log in */}
-      {/* render post component here with map*/}
       <Heading level={1}>Hello {user.username}</Heading>
       <Button onClick={signOut}>Sign out</Button>
+
+      <Feed postQuery={postQuery} />
+      <Post setPostQuery={setPostQuery} />
+
       <h2>Amplify Todos</h2>
-
-      <Post post={postData} />
-
       <Routes>
         <Route path={"/"} element={<Main />} />
         <Route path={"/account-home"} element={<HomePage />} />
