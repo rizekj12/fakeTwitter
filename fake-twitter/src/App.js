@@ -7,6 +7,8 @@ import LoginPage from "./pages/LoginPage";
 import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
+import Sidebar from "./components/Sidebar";
+
 import Tweet from "./components/Tweet.jsx";
 import tweetData from "./data/tweetData.json";
 import { useState, useEffect } from "react";
@@ -29,11 +31,17 @@ function App({ signOut, user }) {
       <Heading level={1}>Hello {user.username}</Heading>
       <Button onClick={signOut}>Sign out</Button>
 
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Feed */}
       {tweetQuery.map((tweet) => (
         <Tweet key={tweet.id} tweet={tweet} />
       ))}
 
-      <h2>Amplify Todos</h2>
+      {/* Widgets */}
+
+      {/* <h2>Amplify Todos</h2> */}
       <Routes>
         <Route path={"/"} element={<Main />} />
         <Route path={"/account-home"} element={<HomePage />} />
