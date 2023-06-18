@@ -16,20 +16,21 @@ function App({ signOut, user }) {
 
   useEffect(() => {
     setTweetQuery(tweetData);
-    console.log(tweetQuery);
   }, []);
 
   /* src/App.js */
   // function App({ signOut, user }) {
   //   // ...
   // }
+  console.log(tweetQuery);
+
   return (
     <>
       <Heading level={1}>Hello {user.username}</Heading>
       <Button onClick={signOut}>Sign out</Button>
 
       {tweetQuery.map((tweet) => (
-        <Tweet key={tweet.id} tweetQuery={tweetQuery} />
+        <Tweet key={tweet.id} tweet={tweet} />
       ))}
 
       <h2>Amplify Todos</h2>
