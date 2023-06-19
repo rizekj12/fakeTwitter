@@ -13,6 +13,8 @@ import Tweet from "./components/Tweet.jsx";
 import tweetData from "./data/tweetData.json";
 import { useState, useEffect } from "react";
 
+import Feed from "./components/Feed";
+
 function App({ signOut, user }) {
   const [tweetQuery, setTweetQuery] = useState([]);
 
@@ -27,7 +29,7 @@ function App({ signOut, user }) {
   console.log(tweetQuery);
 
   return (
-    <>
+    <div className="app">
       <Heading level={1}>Hello {user.username}</Heading>
       <Button onClick={signOut}>Sign out</Button>
 
@@ -35,9 +37,10 @@ function App({ signOut, user }) {
       <Sidebar />
 
       {/* Feed */}
-      {tweetQuery.map((tweet) => (
+      {/* {tweetQuery.map((tweet) => (
         <Tweet key={tweet.id} tweet={tweet} />
-      ))}
+      ))} */}
+      <Feed />
 
       {/* Widgets */}
 
@@ -48,7 +51,7 @@ function App({ signOut, user }) {
         <Route path={"/login-page"} element={<LoginPage />} />
         <Route path={"/signup-page"} element={<SignUp />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
