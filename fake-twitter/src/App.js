@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
+import "./App.css";
 import Sidebar from "./components/Sidebar";
 
 import Tweet from "./components/Tweet.jsx";
@@ -14,6 +15,8 @@ import tweetData from "./data/tweetData.json";
 import { useState, useEffect } from "react";
 
 import Feed from "./components/Feed";
+
+import Widgets from "./components/Widgets";
 
 function App({ signOut, user }) {
   const [tweetQuery, setTweetQuery] = useState([]);
@@ -30,8 +33,8 @@ function App({ signOut, user }) {
 
   return (
     <div className="app">
-      <Heading level={1}>Hello {user.username}</Heading>
-      <Button onClick={signOut}>Sign out</Button>
+      {/* <Heading level={1}>Hello {user.username}</Heading>
+      <Button onClick={signOut}>Sign out</Button> */}
 
       {/* Sidebar */}
       <Sidebar />
@@ -43,10 +46,11 @@ function App({ signOut, user }) {
       <Feed />
 
       {/* Widgets */}
+      <Widgets />
 
       {/* <h2>Amplify Todos</h2> */}
       <Routes>
-        <Route path={"/"} element={<Main />} />
+        {/* <Route path={"/"} element={<Main />} /> */}
         <Route path={"/account-home"} element={<HomePage />} />
         <Route path={"/login-page"} element={<LoginPage />} />
         <Route path={"/signup-page"} element={<SignUp />} />

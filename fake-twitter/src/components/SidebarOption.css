@@ -5,15 +5,13 @@
 }
 
 .sidebarOption:hover {
-  background-color: #e8f5fe;
+  background-color: var(--twitter-background);
   border-radius: 30px;
-  /* color: var(--twitter-color); this isn't working for some reason */
-  color: #50b7f5;
+  color: var(--twitter-color);
   transition: color 100ms ease-out;
 }
 
 .sidebarOption > .MuiSvgIcon-root {
-  /* padding: 10px; */
   padding: 3px;
 }
 
@@ -24,6 +22,5 @@
 }
 
 .sidebarOption--active {
-  color: #50b7f5;
-  /* color: var(--twitter-color); this isn't working for some reason */
+  color: var(--twitter-color);
 }
