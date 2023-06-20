@@ -13,7 +13,7 @@ const TweetBox = () => {
           placeholder="Optional: Enter image URL"
           type="text"
         />
-        <Button>Tweet</Button>
+        <Button className="tweetBox__tweetButton">Tweet</Button>
       </form>
     </div>
   );
