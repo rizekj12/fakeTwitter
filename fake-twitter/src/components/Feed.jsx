@@ -22,7 +22,16 @@ const Feed = () => {
 
       <Post />
       {tweetQuery.map((tweet) => (
-        <Post key={tweet.id} tweet={tweet} />
+        <Post
+          key={tweet.id}
+          profile_image_url={tweet.user.profile_image_url}
+          name={tweet.user.name}
+          screen_name={tweet.user.screen_name}
+          verified={tweet.verified}
+          created_at={tweet.user.created_at}
+          text={tweet.text}
+          image={tweet.image}
+        />
       ))}
     </div>
   );

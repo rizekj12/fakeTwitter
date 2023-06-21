@@ -6,37 +6,42 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import PublishIcon from "@material-ui/icons/Publish";
 
 const Post = ({
-  displayName,
-  username,
+  // displayName,
+  // username,
+  // verified,
+  // timestamp,
+  // text,
+  // image,
+  // avatar,
+
+  profile_image_url,
+  name,
+  screen_name,
   verified,
-  timestamp,
+  created_at,
   text,
   image,
-  avatar,
 }) => {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://pbs.twimg.com/profile_images/1232827677377204224/hT6nT22h_400x400.png" />
+        <Avatar src={profile_image_url} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Duncan Wood{" "}
+              {name}{" "}
               <span className="post_headerSpecial">
-                <VerifiedUserIcon className="post__badge" /> @duncanwood
+                <VerifiedUserIcon className="post__badge" /> @{screen_name}{" "}
               </span>
             </h3>
           </div>
           <div className="post_headerDescription">
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img
-          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXdpYnA0YW51YzdzZThxa3lxNDk2dndxNGxheW1kdm9jcXh2YmFjeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xjTIBA4gjvXIQ/giphy.gif"
-          alt=""
-        />
+        <img src={image} alt="" />
         <div className="post__footer">
           <ChatBubbleOutline fontSize="small" />
           <RepeatIcon fontSize="small" />
