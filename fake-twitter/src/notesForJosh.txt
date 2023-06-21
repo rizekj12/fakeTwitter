@@ -1,3 +1,5 @@
-I commented out the / route with main for now.
+-I commented out the / route with main for now.
 
-in Tweetbox.jsx -> add functionality to add tweet to the database
+-in Tweetbox.jsx -> add functionality to add tweet to the database
+
+-for some reason, the feed takes up too much space even though i put it to flex .4
