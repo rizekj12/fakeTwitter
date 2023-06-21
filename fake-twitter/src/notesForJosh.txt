@@ -1,2 +1,3 @@
 I commented out the / route with main for now.
 
+in Tweetbox.jsx -> add functionality to add tweet to the database

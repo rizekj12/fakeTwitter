@@ -1,11 +1,13 @@
 import HomePage from "./pages/HomePage";
-import Main from "./pages/Main";
 import SignUp from "./pages/SignUpPage";
+// import Main from "./pages/Main";
 
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
-import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
+import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
+// import { Navigate } from "react-router-dom";
+// import { Button, Heading } from "@aws-amplify/ui-react";
 
 import "./App.css";
 import Sidebar from "./components/Sidebar";
