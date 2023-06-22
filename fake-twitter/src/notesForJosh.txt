@@ -2,4 +2,5 @@
 
 -in Tweetbox.jsx -> add functionality to add tweet to the database
 
--for some reason, the feed takes up too much space even though i put it to flex .4
+Known Issues:
+    -for some reason, the feed takes up too much space even though i put it to flex .4
