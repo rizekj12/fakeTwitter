@@ -51,6 +51,7 @@ The following technologies were used in the development of Fake Twitter:
 
 - Docker
 - Relational Database with ~~PostgreSQL~~
+- Amazon RDS
 - ~~AWS Lambda~~
 - ~~AWS API Gateway~~
 
