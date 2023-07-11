@@ -96,3 +96,16 @@ The following technologies were used in the development of Fake Twitter:
 ## Contribution Guidelines
 
 We welcome contributions to our app! If you would like to contribute, please contact any member of our team using the links above for inquiries, to report bugs, or to propose improvements.
+
+### To-Do
+
+- Create AWS RDS PostgreSQL Database
+- Figure out how to connect to database as an IAM user
+- Create a table for users
+- Create a table for tweets
+- Create a table for likes
+- Create a table for retweets
+- Create a table for hashtags
+- Create a table for mentions
+- Create a table for follows
+- Add full CRUD functionality to all tables
