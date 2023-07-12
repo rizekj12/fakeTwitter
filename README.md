@@ -109,3 +109,7 @@ We welcome contributions to our app! If you would like to contribute, please con
 - Create a table for mentions
 - Create a table for follows
 - Add full CRUD functionality to all tables
+
+### Known Bugs
+
+- currently unable to connect to database from Josh's account
