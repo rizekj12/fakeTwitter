@@ -38,6 +38,10 @@ _Software Engineer open to work_<br/>
 
 The following technologies were used in the development of Fake Twitter:
 
+#### Planning
+
+- https://trello.com/invite/b/QMQ9ukyF/ATTIb62fc903654ee256b3cd9d1b9ce9efbf1A9A679C/fake-twitter
+
 #### Frontend
 
 - JavaScript, HTML, CSS
