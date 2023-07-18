@@ -55,6 +55,7 @@ const Post = forwardRef(
           </div>
           <div className="placeholder__post__edit">
             <button className="placeholder__post__edit__button">Edit</button>
+            <button className="placeholder__post__edit__button">Delete</button>
           </div>
         </div>
       </div>
