@@ -53,6 +53,9 @@ const Post = forwardRef(
             <FavoriteBorder fontSize="small" />
             <PublishIcon fontSize="small" />
           </div>
+          <div className="placeholder__post__edit">
+            <button className="placeholder__post__edit__button">Edit</button>
+          </div>
         </div>
       </div>
     );

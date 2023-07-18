@@ -1,5 +1,6 @@
 .widgets {
   flex: 0.3;
+  overflow-y: scroll;
 }
 
 .widgets__input {

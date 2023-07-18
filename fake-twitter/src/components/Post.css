@@ -44,3 +44,33 @@
 .post__avatar {
   padding: 20px;
 }
+
+/* temporary  */
+
+.placeholder__post__edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.placeholder__post__edit__button:hover {
+  background-color: #e8f5fe;
+  border-radius: 30px;
+  color: var(--twitter-color);
+  transition: color 100ms ease-out;
+}
+
+.placeholder__post__edit__button {
+  background-color: var(--twitter-color) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 500 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  width: 80px;
+  height: 40px !important;
+  margin-top: 10px !important;
+  margin-left: auto !important;
+  cursor: pointer;
+}
