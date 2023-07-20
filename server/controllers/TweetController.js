@@ -3,6 +3,7 @@ const pool = require("../db");
 // Create a new tweet
 const CreateTweet = async (req, res) => {
   try {
+    console.log("Received data:", req.body); // Add this line to check the received data
     const { text, user_id } = req.body;
     const newTweet = await pool.query(
       "INSERT INTO tweet (text, user_id) VALUES ($1, $2) RETURNING *",

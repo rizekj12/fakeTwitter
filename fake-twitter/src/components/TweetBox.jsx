@@ -3,17 +3,26 @@ import { Avatar, Button } from "@mui/material";
 import { useState } from "react";
 
 const TweetBox = () => {
-  const [tweetMessage, setTweetMessage] = useState("");
+  const [text, setText] = useState("");
   const [tweetImage, setTweetImage] = useState("");
 
-  const sendTweet = (e) => {
+  const sendTweet = async (e) => {
     e.preventDefault();
-    console.log(tweetMessage);
+    console.log("Tweet message:", text); // Add this line to check the value
+    try {
+      const body = { text };
+      const response = await fetch("http://localhost:3001/api/tweets", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
 
-    //add functionality to send tweet to database
-    //POST {}
-    setTweetMessage("");
-    setTweetImage("");
+      console.log(response);
+      // setText("");
+      // setTweetImage("");
+    } catch (err) {
+      console.error(err.message);
+    }
   };
   return (
     <div className="tweetBox">
@@ -21,8 +30,8 @@ const TweetBox = () => {
         <div className="tweetBox__input">
           <Avatar src="https://pbs.twimg.com/profile_images/1232827677377204224/hT6nT22h_400x400.png" />
           <input
-            onChange={(e) => setTweetMessage(e.target.value)}
-            value={tweetMessage}
+            onChange={(e) => setText(e.target.value)}
+            value={text}
             placeholder="What is happening?!"
             type="text"
           ></input>
