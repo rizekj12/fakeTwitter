@@ -16,10 +16,9 @@ const TweetBox = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-
-      console.log(response);
-      // setText("");
-      // setTweetImage("");
+      setText("");
+      setTweetImage("");
+      window.location.reload();
     } catch (err) {
       console.error(err.message);
     }
