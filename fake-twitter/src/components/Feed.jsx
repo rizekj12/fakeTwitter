@@ -4,15 +4,35 @@ import Post from "./Post";
 import tweetData from "../data/tweetData.json";
 import { useState, useEffect } from "react";
 import FlipMove from "react-flip-move";
+import { Flip } from "@material-ui/icons";
 
 const Feed = () => {
-  const [tweetQuery, setTweetQuery] = useState([]);
+  // for JSON data
+  // const [tweetQuery, setTweetQuery] = useState([]);
+
+  // useEffect(() => {
+  //   setTweetQuery(tweetData);
+  // }, []);
+
+  // for Server data
+  const [tweets, setTweets] = useState([]);
+  const getTweets = async () => {
+    try {
+      // by default, fetch makes a GET request
+      const response = await fetch("http://localhost:3001/api/tweets");
+      const jsonData = await response.json();
+      setTweets(jsonData);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
 
   useEffect(() => {
-    setTweetQuery(tweetData);
+    getTweets();
   }, []);
 
-  console.log(tweetQuery);
+  // console.log(tweetQuery);
+  console.log(tweets);
   return (
     <div className="feed">
       <div className="feed__header">
@@ -20,7 +40,17 @@ const Feed = () => {
       </div>
 
       <TweetBox />
-
+      <FlipMove>
+        {tweets.map((tweet) => (
+          <Post
+            key={tweet.tweet_id}
+            tweet={tweet}
+            tweets={tweets}
+            setTweets={setTweets}
+          />
+        ))}
+      </FlipMove>
+      {/* 
       <FlipMove>
         {tweetQuery.map((tweet) => (
           <Post
@@ -34,7 +64,7 @@ const Feed = () => {
             image={tweet.image}
           />
         ))}
-      </FlipMove>
+      </FlipMove> */}
     </div>
   );
 };

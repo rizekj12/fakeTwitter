@@ -52,7 +52,7 @@
   justify-content: space-between;
 }
 
-.placeholder__post__edit__button:hover {
+.placeholder__post__edit__button--active {
   background-color: #e8f5fe;
   border-radius: 30px;
   color: var(--twitter-color);
@@ -61,6 +61,26 @@
 
 .placeholder__post__edit__button {
   background-color: var(--twitter-color) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 500 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  width: 80px;
+  height: 40px !important;
+  margin-top: 10px !important;
+  cursor: pointer;
+}
+
+.placeholder__post__delete__button--active {
+  background-color: lightcoral;
+  border-radius: 30px;
+  color: var(--twitter-color);
+  transition: color 100ms ease-out;
+}
+
+.placeholder__post__delete__button {
+  background-color: red !important;
   border: none !important;
   color: white !important;
   font-weight: 500 !important;
