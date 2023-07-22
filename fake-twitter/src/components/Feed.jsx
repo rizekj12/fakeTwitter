@@ -1,18 +1,18 @@
 import "./Feed.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
-// import tweetData from "../data/tweetData.json";
+import tweetData from "../data/tweetData.json";
 import { useState, useEffect } from "react";
 import FlipMove from "react-flip-move";
-// import { Flip } from "@material-ui/icons";
+import DummyPost from "./DummyPost";
 
 const Feed = () => {
   // for JSON data
-  // const [tweetQuery, setTweetQuery] = useState([]);
+  const [tweetQuery, setTweetQuery] = useState([]);
 
-  // useEffect(() => {
-  //   setTweetQuery(tweetData);
-  // }, []);
+  useEffect(() => {
+    setTweetQuery(tweetData);
+  }, []);
 
   // for Server data
   const [tweets, setTweets] = useState([]);
@@ -50,11 +50,11 @@ const Feed = () => {
           />
         ))}
       </FlipMove>
-      {/* 
-      // for JSON data
+
+      {/* for JSON data */}
       <FlipMove>
         {tweetQuery.map((tweet) => (
-          <Post
+          <DummyPost
             key={tweet.id}
             profile_image_url={tweet.user.profile_image_url}
             name={tweet.user.name}
@@ -65,7 +65,7 @@ const Feed = () => {
             image={tweet.image}
           />
         ))}
-      </FlipMove> */}
+      </FlipMove>
     </div>
   );
 };

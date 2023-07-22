@@ -25,49 +25,53 @@ const Post = forwardRef(({ tweet, tweets, setTweets }, ref) => {
   };
   return (
     <div className="post" ref={ref}>
-      {/* <div className="post__avatar">
-          <Avatar src={profile_image_url} />
-        </div> */}
-      <div className="post__body">
-        {/* <div className="post__header">
-            <div className="post__headerText">
-              <h3>
-                {name}{" "}
-                <span className="post_headerSpecial">
-                  <VerifiedUserIcon className="post__badge" /> @{screen_name}{" "}
-                </span>
-              </h3>
-            </div> */}
-        <div className="post_headerDescription">
-          <p>{tweet.text}</p>
-        </div>
+      <div className="post__avatar">
+        {/* TODO: change to tweet.profile_image_url */}
+        <Avatar src="placeholder" />
       </div>
-      {/* <img src={image} alt="" />
-          <div className="post__footer">
-            <ChatBubbleOutline fontSize="small" />
-            <RepeatIcon fontSize="small" />
-            <FavoriteBorder fontSize="small" />
-            <PublishIcon fontSize="small" />
-          </div> */}
-      <div className="placeholder__post__edit">
-        {/* <button className="placeholder__post__edit__button">Edit</button> */}
-        <button className="placeholder__post__edit__button">
+      <div className="post__body">
+        <div className="post__header">
+          <div className="post__headerText">
+            <h3>
+              {/* {tweet.name} */}
+              placeholder
+              <span className="post_headerSpecial">
+                {/* {tweet.screen_name} */}
+                {tweet.user?.verified ? (
+                  <VerifiedUserIcon className="post__badge" />
+                ) : null}
+                @placeholder
+              </span>
+            </h3>
+          </div>
+          <div className="post_headerDescription">
+            <p>{tweet.text}</p>
+          </div>
+        </div>
+        <img src="placeholder" alt="" />
+        <div className="post__footer">
+          <ChatBubbleOutline fontSize="small" />
+          <RepeatIcon fontSize="small" />
+          <FavoriteBorder fontSize="small" />
+          <PublishIcon fontSize="small" />
+        </div>
+        <div className="placeholder__post__edit">
           <EditPost
             tweet={tweet}
             tweets={tweets}
             setTweets={setTweets}
             deleteTweet={deleteTweet}
           />
-        </button>
-        <button
-          className="placeholder__post__delete__button"
-          onClick={() => deleteTweet(tweet.tweet_id)}
-        >
-          Delete
-        </button>
+
+          <button
+            className="placeholder__post__delete__button"
+            onClick={() => deleteTweet(tweet.tweet_id)}
+          >
+            Delete
+          </button>
+        </div>
       </div>
     </div>
-    // </div>
   );
 });
 

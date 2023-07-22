@@ -11,7 +11,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 600,
   bgcolor: "background.paper",
   border: "1px solid #000",
   boxShadow: 24,
@@ -46,7 +46,9 @@ const EditPost = ({ tweet, tweets, setTweets, deleteTweet }) => {
 
   return (
     <>
-      <Button onClick={handleOpen}>Edit</Button>
+      <button className="placeholder__post__edit__button" onClick={handleOpen}>
+        Edit
+      </button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -68,24 +70,26 @@ const EditPost = ({ tweet, tweets, setTweets, deleteTweet }) => {
               ></input>
             </div>
           </Typography>
-          <Button
-            onClick={(e) => {
-              editText(e);
-              handleClose();
-            }}
-            className="placeholder__post__edit__button"
-          >
-            Edit
-          </Button>
-          <Button
-            className="placeholder__post__delete__button"
-            onClick={() => {
-              deleteTweet(tweet.tweet_id);
-              handleClose();
-            }}
-          >
-            Delete
-          </Button>
+          <div className="placeholder__post__edit">
+            <button
+              onClick={(e) => {
+                editText(e);
+                handleClose();
+              }}
+              className="placeholder__post__edit__button"
+            >
+              Edit
+            </button>
+            <button
+              className="placeholder__post__delete__button"
+              onClick={() => {
+                deleteTweet(tweet.tweet_id);
+                handleClose();
+              }}
+            >
+              Delete
+            </button>
+          </div>
         </Box>
       </Modal>
     </>
