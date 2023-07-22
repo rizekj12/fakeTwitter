@@ -1,10 +1,10 @@
 import "./Feed.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
-import tweetData from "../data/tweetData.json";
+// import tweetData from "../data/tweetData.json";
 import { useState, useEffect } from "react";
 import FlipMove from "react-flip-move";
-import { Flip } from "@material-ui/icons";
+// import { Flip } from "@material-ui/icons";
 
 const Feed = () => {
   // for JSON data
@@ -51,6 +51,7 @@ const Feed = () => {
         ))}
       </FlipMove>
       {/* 
+      // for JSON data
       <FlipMove>
         {tweetQuery.map((tweet) => (
           <Post

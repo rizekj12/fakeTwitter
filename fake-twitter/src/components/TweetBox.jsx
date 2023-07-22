@@ -8,10 +8,9 @@ const TweetBox = () => {
 
   const sendTweet = async (e) => {
     e.preventDefault();
-    console.log("Tweet message:", text); // Add this line to check the value
     try {
       const body = { text };
-      const response = await fetch("http://localhost:3001/api/tweets", {
+      await fetch("http://localhost:3001/api/tweets", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
